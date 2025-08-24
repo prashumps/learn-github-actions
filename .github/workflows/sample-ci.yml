@@ -6,18 +6,22 @@ jobs:
     steps:
       - run: echo OK
   Test:
+    needs: Build
     runs-on: self-hosted
     steps:
       - run: echo OK
   Dev_Deploy:
+    needs: Test
     runs-on: self-hosted
     steps:
       - run: echo OK
   Uat_Deploy:
+    needs: Dev_Deploy
     runs-on: self-hosted
     steps:
       - run: echo OK
   Prod_Deploy:
+    needs: Uat_Deploy
     runs-on: self-hosted
     steps:
       - run: echo OK
