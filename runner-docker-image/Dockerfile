@@ -1,5 +1,5 @@
 FROM        docker.io/redhat/ubi9
-RUN         culr -L -o /etc/yum.repos.d/hashi.repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+RUN         curl -L -o /etc/yum.repos.d/hashi.repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
 RUN         dnf install libicu make terraform -y
 RUN         useradd github
 USER        github
