@@ -1,5 +1,5 @@
 name: sample CICD
-on: [workflow_dispatch]
+on: [push, workflow_dispatch]
 jobs:
   Build:
     runs-on: self-hosted
