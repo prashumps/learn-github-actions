@@ -1,0 +1,7 @@
+name: sample CICD - DEV
+on: [push, workflow_dispatch]
+jobs:
+  Build:
+    runs-on: self-hosted
+    steps:
+      - run: echo OK
